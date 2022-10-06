@@ -64,8 +64,24 @@ console.log(resultTwo);
 
 // callbacks and foreach
 
-const myFunc = (callbackFunc) => {
-  //do something
-  let value = 50;
-  callbackFunc(value);
-};
+let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+
+const logPerson = function(person, index) {
+  console.log(`${index} - hello ${person}`);
+}
+
+people.forEach(logPerson);
+
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
+
+let html = ``;
+
+people.forEach(function(person) {
+  // create html template
+  html += `<li style = "color: purple">${person}</li>`;
+});
+
+console.log(html);
+ul.innerHTML = html;
