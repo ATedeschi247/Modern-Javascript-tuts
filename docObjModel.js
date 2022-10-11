@@ -30,42 +30,68 @@
 // console.log(para.innerText);
 // para.innerText = 'ninjas are awesome';
 
-const paras = document.querySelectorAll('p');
+// const paras = document.querySelectorAll('p');
 
 // paras.forEach(function(para) {
 //   console.log(para.innerText);
 //   para.innerText += ' new text';
 // });
 
-const content = document.querySelector('.content');
+// const content = document.querySelector('.content');
 
 // console.log(content.innerHTML);
 // content.innerHTML += '<h2>This is a new h2</h2>';
 
-const people = ['mario', 'luigi', 'yoshi'];
-people.forEach(function(person) {
-  content.innerHTML += `<p>${person}</p>`;
+// const people = ['mario', 'luigi', 'yoshi'];
+// people.forEach(function(person) {
+//   content.innerHTML += `<p>${person}</p>`;
+// });
+
+// const link = document.querySelector('a');
+
+// console.log(link.getAttribute('href'));
+// link.setAttribute('href', 'https://www.thenetninja.co.uk');
+// link.innerText = 'net ninja site';
+
+// const mssg = document.querySelector('p');
+// console.log(mssg.getAttribute('class'));
+// mssg.setAttribute('class', 'success');
+// mssg.setAttribute('style', 'color: green');
+
+// const title = document.querySelector('h1');
+
+// // title.setAttribute('style', 'margin: 50px');
+
+// console.log(title.style);
+// console.log(title.style.color);
+
+// title.style.margin = '50px';
+// title.style.color = 'crimson';
+// title.style.fontSize = '60px';
+// title.style.margin = "";
+
+// const content = document.querySelector('p');
+
+// console.log(content.classList);
+// content.classList.add('error');
+// content.classList.remove('error');
+// content.classList.add('success');
+
+const paras = document.querySelectorAll('p');
+
+console.log(paras);
+paras.forEach(function(paragraph) {
+  if (paragraph.textContent.includes('error')) {
+    paragraph.classList.add('error');
+  }
+  if (paragraph.textContent.includes('success')) {
+    paragraph.classList.add('success');
+  }
 });
 
-const link = document.querySelector('a');
+const title = document.querySelector('.title');
 
-console.log(link.getAttribute('href'));
-link.setAttribute('href', 'https://www.thenetninja.co.uk');
-link.innerText = 'net ninja site';
+title.classList.toggle('test');
+title.classList.toggle('test');
 
-const mssg = document.querySelector('p');
-console.log(mssg.getAttribute('class'));
-mssg.setAttribute('class', 'success');
-mssg.setAttribute('style', 'color: green');
-
-const title = document.querySelector('h1');
-
-// title.setAttribute('style', 'margin: 50px');
-
-console.log(title.style);
-console.log(title.style.color);
-
-title.style.margin = '50px';
-title.style.color = 'crimson';
-title.style.fontSize = '60px';
-title.style.margin = "";
+// 3 class methods: add, remove, and toggle
